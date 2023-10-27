@@ -44,7 +44,7 @@ public class Interface {
 
     public void exibirRealizarVenda() {
         contentPanel.remove(1);
-        contentPanel.add(realizarVenda, BorderLayout.NORTH);
+        contentPanel.add(realizarVenda, BorderLayout.CENTER);
         contentPanel.revalidate();
         contentPanel.repaint();
     }

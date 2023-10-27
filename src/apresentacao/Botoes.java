@@ -1,6 +1,9 @@
 package apresentacao;
 
 import javax.swing.*;
+
+import negocios.ControllerListarVendas;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -30,6 +33,8 @@ public class Botoes {
 
 		btnListarVendas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ControllerListarVendas controller = new ControllerListarVendas();
+				System.out.println(controller.obterVendas());
 				interfaceApp.exibirListarVendas();
 			}
 		});
