@@ -7,21 +7,25 @@ import apresentacao.ListarVendas;
 import java.util.ArrayList;
 
 public class ControllerListarVendas {
-	private List<Venda> vendas;
+	ArrayList<Venda> vendas = new ArrayList<Venda>();
+	public int times = 0;
 
 	public ControllerListarVendas() {
-		vendas = new ArrayList<Venda>();
+
 	}
 
 	public void adicionarVenda(Venda venda) {
 		vendas.add(venda);
-		
+		System.out.println(vendas.size());
+	}
+
+	public ArrayList<Venda> obterVendas() {
+		return vendas;
+	}
+	
+	public void listarVendas() {
 		for (Venda c : vendas) {
 			System.out.println(c.getNomeCliente());
 		}
-	}
-
-	public List<Venda> obterVendas() {
-		return vendas;
 	}
 }
